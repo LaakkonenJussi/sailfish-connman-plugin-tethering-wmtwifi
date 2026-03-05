@@ -288,6 +288,7 @@ tethering_check_ap(
             all_valid = FALSE;
         } else if (i->caps.modes & GSUPPLICANT_INTERFACE_CAPS_MODES_AP) {
             ap_ifname = i->ifname;
+            connman_tethering_set_tethering_interface(ap_ifname);
         }
     }
 
